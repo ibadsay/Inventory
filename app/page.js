@@ -68,6 +68,7 @@ export default function Home() {
     width="100vw" 
     height="100vh" 
     display="flex" 
+    bgcolor='#352F44'
     flexDirection="column"
     justifyContent="center" 
     alignItems="center" 
@@ -78,8 +79,8 @@ export default function Home() {
           top="50%" 
           left="50%" 
           width={400} 
-          bgcolor="white" 
-          border="2px solid #000" 
+          bgcolor="#352F44" 
+          border="2px solid #5C5470" 
           boxShadow={24}
           p={4}
           display="flex" 
@@ -88,7 +89,7 @@ export default function Home() {
           sx={{
             transform: "translate(-50%, -50%)" 
           }}>
-          <Typography variant="h6">Add Item</Typography>
+          <Typography variant="h6" color='#B9B4C7'>Add Item</Typography>
           <Stack width="100%" direction="row" spacing={2}>
             <TextField 
             variant='outlined'
@@ -99,7 +100,7 @@ export default function Home() {
             }}
             ></TextField>
             <Button 
-              variant='outlined' 
+              variant='outlined'
               onClick={()=> {
                 addItem(itemName)
                 setItemName('')
@@ -110,18 +111,19 @@ export default function Home() {
       </Modal>
       <Button 
       variant='contained'
+      bgcolor='#333'
       onClick={()=>{
         handleOpen()
       }}>Add New Item</Button>
-      <Box border="1px solid #222">
+      <Box border="1px solid #352F44">
         <Box 
         width="800px" 
         height="100px" 
-        bgcolor="#ADD8E6"
+        bgcolor="#5C5470"
         alignItems="center"
         justifyContent="center"
         display="flex">
-          <Typography variant='h2' color="#333">
+          <Typography variant='h2' color="#FAF0E6">
             Inventory Items
           </Typography>
         </Box>
@@ -135,12 +137,12 @@ export default function Home() {
             display="flex"
             alignItems="center"
             justifyContent='space-between'
-            bgcolor='#fff'
+            bgcolor='#B9B4C7'
             padding={5}>
-              <Typography variant='h3'color='#333'textAlign='center'>
+              <Typography variant='h3'color='#FAF0E6'textAlign='center'>
                 {name.charAt(0).toUpperCase() + name.slice(1)}
               </Typography>
-              <Typography variant='h3'color='#333'textAlign='center'>
+              <Typography variant='h3'color='#FAF0E6'textAlign='center'>
                 {quantity}
               </Typography>
               <Stack direction='row' spacing={2}>
